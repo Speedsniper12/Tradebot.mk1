@@ -1,64 +1,57 @@
-import java.util.*;
-import java.math.*;
-
 public class TradingBot {
-  
-  // Initialize variables
-  private double currentPrice;
-  private double previousPrice;
-  private double buyThreshold;($50)
-  private double sellThreshold;($70)
-  private boolean isBought;
-  
-  public TradingBot(double buyThreshold, double sellThreshold) {
-    this.currentPrice = 0;
-    this.previousPrice = 0;
-    this.buyThreshold = buyThreshold;
-    this.sellThreshold = sellThreshold;
-    this.isBought = false;
-  }
-  
-  public void setCurrentPrice(double price) {
-    this.currentPrice = price;
-  }
-  
-  public void setPreviousPrice(double price) {
-    this.previousPrice = price;
-  }
-  
-  public void checkPrice() {
-    if (this.currentPrice <= this.buyThreshold && !this.isBought) {
-      buy();
-    } else if (this.currentPrice >= this.sellThreshold && this.isBought) {
-      sell();
-    }
-  }
-  
-  private void buy() {
-    // Insert buy logic here
-    System.out.println("Buying at " + this.currentPrice);
-    this.isBought = true;
-  }
-  
-  private void sell() {
-    // Insert sell logic here
-    System.out.println("Selling at " + this.currentPrice);
-    this.isBought = false;
-  }
-  
-  public static void main(String[] args) {
-    TradingBot bot = new TradingBot(50, 100); // Set buy and sell thresholds
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter price: ");
-    double price = scanner.nextDouble();
-    bot.setCurrentPrice(price);
-    bot.setPreviousPrice(price);
-    while (true) {
-      System.out.print("Enter price: ");
-      price = scanner.nextDouble();
-      bot.setPreviousPrice(bot.getCurrentPrice());
-      bot.setCurrentPrice(price);
-      bot.checkPrice();
-    }
-  }
-}
+>> >>
+>> >>   // Initialize variables
+>> >>   private double currentPrice;
+>> >>   private double previousPrice;
+>> >>   private double buyThreshold;($50)
+>> >>   private double sellThreshold;($70)
+>> >>   private boolean isBought;
+>> >>
+>> >>   public TradingBot(double buyThreshold, double sellThreshold) {
+>> >>     this.currentPrice = 0;
+>> >>     this.previousPrice = 0;
+>> >>     this.buyThreshold = buyThreshold;
+>> >>     this.sellThreshold = sellThreshold;
+>> >>     this.isBought = false;
+>> >>   }
+>> >>
+>> >>   public void setCurrentPrice(double price) {
+>> >>     this.currentPrice = price;
+>> >>   }
+>> >>
+>> >>   public void setPreviousPrice(double price) {
+>> >>     this.previousPrice = price;
+>> >>   }
+>> >>
+>> >>   public void checkPrice($50) {
+>> >>     if (this.currentPrice = this.buyThreshold && this.isBought) {
+>> >>       buy($50);
+>> >>     } if (this.currentPrice >= this.sellThreshold this.isBought) {
+>> >>       sell($70)
+>> >>   }
+>> >>
+>> >>   private void buy($50) {
+>> >>     // Insert buy logic here
+>> >>     System.out.println("Buying at " = this.currentPrice)
+>> >>   }
+>> >>
+>> >>   private void sell($50) {
+>> >>     // Insert sell logic here
+>> >>     System.out.println("Selling at "= this.currentPrice;
+>> >>     this.isBought = false;
+>> >>   }
+>> >>
+>> >>   public static void main(String[] args) {
+>> >>     TradingBot bot = new TradingBot(50, 100); // Set buy and sell thresholds
+>> >>     Scanner scanner = new Scanner(System.in);
+>> >>     System.out.print("Enter price: ");
+>> >>     double price = scanner.nextDouble();
+>> >>     bot.setCurrentPrice(price);
+>> >>     bot.setPreviousPrice(price);
+>> >>     while (true) {
+>> >>       System.out.print("Enter price: ");
+>> >>       price = scanner.nextDouble();
+>> >>       bot.setPreviousPrice(bot.getCurrentPrice());
+>> >>       bot.setCurrentPrice(price);
+>> >>       bot.checkPrice();
+>>
